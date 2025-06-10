@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: lz6c1wtrb-java-springboot
+  janus-idp.io/tekton: lz6c1wtrb-java-springboot
+  backstage.io/kubernetes-id: lz6c1wtrb-java-springboot
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: lz6c1wtrb-java-springboot
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
